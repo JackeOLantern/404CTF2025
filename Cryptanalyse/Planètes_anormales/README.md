@@ -8,8 +8,8 @@ Bienvenue dans le dépôt de **Cryptanalyse/Planètes anormales**.
 
 ## Fonctionnalités
 
-- **solution expliquée** : Planètes anormales (Fichier PDF / ODT).
-- **Synchronisation de source** : challenge.py (Script PY)
+- **La solution expliquée** : Planètes anormales (Fichier PDF / ODT).
+- **La synchronisation de source** : challenge.py (Script PY)
 
 ## Installation
 
