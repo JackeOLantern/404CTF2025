@@ -3,7 +3,8 @@
 Bienvenue dans le dépôt de **Cryptanalyse/Saturn Cypher**.
 
 ## Enoncé du sujet
-![image](https://github.com/user-attachments/assets/043f9722-1fd4-4fad-9a33-31130c451270)
+![image](https://github.com/user-attachments/assets/99dea510-bed2-4848-9e84-5b28b4ed2ee5)
+
 
 
 ## Fonctionnalités
