@@ -1,6 +1,6 @@
-# Solution du challenge : Planètes anormales
+# Solution du challenge : Saturn Cypher
 
-Bienvenue dans le dépôt de **Cryptanalyse/Planètes anormales**.
+Bienvenue dans le dépôt de **Cryptanalyse/Saturn Cypher**.
 
 ## Enoncé du sujet
 ![image](https://github.com/user-attachments/assets/043f9722-1fd4-4fad-9a33-31130c451270)
@@ -8,8 +8,8 @@ Bienvenue dans le dépôt de **Cryptanalyse/Planètes anormales**.
 
 ## Fonctionnalités
 
-- **La solution expliquée** : Planètes anormales (Fichier PDF / ODT).
-- **La synchronisation de source** : challenge.py (Script PY)
+- **La solution expliquée** : Saturn Cypher (Fichier PDF / Word).
+- **La synchronisation de source** : SaturnCypher.py (Script PY)
 
 ## Installation
 
