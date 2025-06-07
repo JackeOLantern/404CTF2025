@@ -3,7 +3,7 @@
 Bienvenue dans le dépôt de **Cryptanalyse/Saturn Cypher**.
 
 ## Enoncé du sujet
-![image](https://github.com/user-attachments/assets/99dea510-bed2-4848-9e84-5b28b4ed2ee5)
+![image](assets/images/enonce.png)
 
 
 
@@ -11,6 +11,8 @@ Bienvenue dans le dépôt de **Cryptanalyse/Saturn Cypher**.
 
 - **La solution expliquée** : Saturn Cypher (Fichier PDF / Word).
 - **La synchronisation de source** : SaturnCypher.py (Script PY)
+- **La résolution de la source** : SaturnCipherExploit.py (Script PY)
+- **L'alternative à la résolution** : SaturnCipherNetcat.py (Script PY)
 
 ## Installation
 
