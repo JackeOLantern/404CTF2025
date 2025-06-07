@@ -1,0 +1,209 @@
+
+docker run -it --rm --cpus="4" --memory="3000m"  sagemath/sagemath  sage
+### COURBE CUSTOM
+
+p = 0xf7fda1b2f0c9ea506e8a125766fd9e5046fd5716630c84f526fea8ce10497829
+a = 0xbb0480e1f010abb2e69e7d72df5d75a23a15bc73710df25b6da04121f904e4f5
+b = 0xfa2bddcca24c1d80baf26cb1e1f04cf78e995c675543c9692e959f83b470a03
+
+F = GF(p)
+E = EllipticCurve(F, [a, b])
+n = E.order()
+
+print("p =", p)
+print("#E(F_p) =", n)
+print("Anormale ?" , "O" if n == p else "N")
+
+
+COURBE 1
+
+p = 0xdb7c2abf62e35e668076bead208b
+a = 0xdb7c2abf62e35e668076bead2088
+b = 0x659ef8ba043916eede8911702b22
+
+F = GF(p)
+E = EllipticCurve(F, [a, b])
+n = E.order()
+
+print("p =", p)
+print("#E(F_p) =", n)
+print("Anormale ?" , "O" if n == p else "N")
+
+
+COURBE 2
+
+p = 0xfffffffffffffffffffffffffffffffeffffac73
+a = 0x0000000000000000000000000000000000000000
+b = 0x0000000000000000000000000000000000000007
+
+F = GF(p)
+E = EllipticCurve(F, [a, b])
+n = E.order()
+
+print("p =", p)
+print("#E(F_p) =", n)
+print("Anormale ?" , "O" if n == p else "N")
+
+
+COURBE 
+
+p = 0xfffffffffffffffffffffffffffffffeffffac73
+a = 0xfffffffffffffffffffffffffffffffeffffac70
+b = 0xb4e134d3fb59eb8bab57274904664d5af50388ba
+
+F = GF(p)
+E = EllipticCurve(F, [a, b])
+n = E.order()
+
+print("p =", p)
+print("#E(F_p) =", n)
+print("Anormale ?" , "O" if n == p else "N")
+
+
+
+
+
+
+
+
+
+
+
+
+# ⚙️ Paramètres de la courbe (déjà connus)
+
+
+
+p = 0xf7fda1b2f0c9ea506e8a125766fd9e5046fd5716630c84f526fea8ce10497829
+a = 0xbb0480e1f010abb2e69e7d72df5d75a23a15bc73710df25b6da04121f904e4f5
+b = 0xfa2bddcca24c1d80baf26cb1e1f04cf78e995c675543c9692e959f83b470a03
+gx = 0x735d07d96821ec8bff37eb23c31081ea526ddc10abe22375518c44e043a39db0
+gy = 0x97e570cf7c177584ddd036d9181a3f5f83307f60c92b539a2d4f479d9c9ad4bd
+qx = 8749660515037795936645140068388691566449436517596839242543176840572393988947
+qy = 74673472577086325242840163499342161408999671550519465480137700627700843692279
+F = GF(p)
+E = EllipticCurve(F, [a, b])
+G = E(gx, gy)
+Q = E(qx, qy)
+
+# Résolution via Smart (car #E(F_p) = p)
+# Comme le groupe est isomorphe à (Z/pZ, +), on peut utiliser la méthode directe :
+# Cherche d tel que Q = d * G
+d = discrete_log(Q, G, operation='+')
+print(f"[+] d retrouvé : {d}")
+
+######################################################################################################################"""""
+
+# Paramètres de la courbe anormale **** REEL NETCAT 23c21181c74b0b2084ec1232606ba05b59374f309f849de74530800039abcbedf277d05e6c8ef29c871b78c908297107
+p = 0xf7fda1b2f0c9ea506e8a125766fd9e5046fd5716630c84f526fea8ce10497829
+a = 0xbb0480e1f010abb2e69e7d72df5d75a23a15bc73710df25b6da04121f904e4f5
+b = 0xfa2bddcca24c1d80baf26cb1e1f04cf78e995c675543c9692e959f83b470a03
+gx = 0x735d07d96821ec8bff37eb23c31081ea526ddc10abe22375518c44e043a39db0
+gy = 0x97e570cf7c177584ddd036d9181a3f5f83307f60c92b539a2d4f479d9c9ad4bd
+qx = 39311316229561408016945382012255721276819025652402786701955298003197076419773
+qy = 47712086530320905176477697257104565833621565835204235488853774905456221103927
+
+# Corps fini
+F = GF(p)
+E = EllipticCurve(F, [a, b])
+G = E(gx, gy)
+Q = E(qx, qy)
+
+# ---- Étape clé : on exploite le fait que #E(F_p) = p => attaque de Smart
+# 1. On mappe vers Z/pZ (structure additive)
+# 2. Cela permet de récupérer d tel que Q = d·G
+# On transforme les points G et Q en "scalars"
+
+# Formule de Smart:
+# d = (x_Q - x_G) / (x_G - x_O)  mod p
+# Mais ici, Sage fait ça automatiquement avec `discrete_log` si ordre == p
+
+# Vérification
+assert E.order() == p, "La courbe n'est pas anormale (ordre ≠ p)"
+
+# Log discret sur courbe anormale (attaque de Smart implicite)
+print("[*] Calcul de d via discrete_log sur courbe anormale...")
+d = discrete_log(Q, G, operation='+')
+print(f"[+] d retrouvé : {d}")
+
+################################################################################################"""""
+        return Curve(0xbb0480e1f010abb2e69e7d72df5d75a23a15bc73710df25b6da04121f904e4f5,
+                     0xfa2bddcca24c1d80baf26cb1e1f04cf78e995c675543c9692e959f83b470a03,
+                     0xf7fda1b2f0c9ea506e8a125766fd9e5046fd5716630c84f526fea8ce10497829,
+                     (0x735d07d96821ec8bff37eb23c31081ea526ddc10abe22375518c44e043a39db0,
+                      0x97e570cf7c177584ddd036d9181a3f5f83307f60c92b539a2d4f479d9c9ad4bd)
+                     )
+#######################################################""""""
+
+
+# Définir la courbe elliptique et les points
+p = 0xf7fda1b2f0c9ea506e8a125766fd9e5046fd5716630c84f526fea8ce10497829
+a = 0xbb0480e1f010abb2e69e7d72df5d75a23a15bc73710df25b6da04121f904e4f5
+b = 0xfa2bddcca24c1d80baf26cb1e1f04cf78e995c675543c9692e959f83b470a03
+
+F = GF(p)
+E = EllipticCurve(F, [a, b])
+
+# Définir les points P et Q avec leurs coordonnées (gx, gy)
+P = E(0x735d07d96821ec8bff37eb23c31081ea526ddc10abe22375518c44e043a39db0, 0x97e570cf7c177584ddd036d9181a3f5f83307f60c92b539a2d4f479d9c9ad4bd)
+Q = E(8749660515037795936645140068388691566449436517596839242543176840572393988947 , 74673472577086325242840163499342161408999671550519465480137700627700843692279)  # Remplacez par les coordonnées de Q
+
+# Utiliser la fonction de logarithme discret de SageMath
+d = discrete_log(Q, P, operation='+')
+print("Valeur de d trouvée :", d)
+*********************************************************************************************
+
+SOLUTION + flag
+
+
+f# Paramètres de la courbe elliptique anormale
+p  = 0xf7fda1b2f0c9ea506e8a125766fd9e5046fd5716630c84f526fea8ce10497829
+a  = 0xbb0480e1f010abb2e69e7d72df5d75a23a15bc73710df25b6da04121f904e4f5
+b  = 0x0fa2bddcca24c1d80baf26cb1e1f04cf78e995c675543c9692e959f83b470a03
+gx = 0x735d07d96821ec8bff37eb23c31081ea526ddc10abe22375518c44e043a39db0
+gy = 0x97e570cf7c177584ddd036d9181a3f5f83307f60c92b539a2d4f479d9c9ad4bd
+qx = 39311316229561408016945382012255721276819025652402786701955298003197076419773
+qy = 47712086530320905176477697257104565833621565835204235488853774905456221103927
+
+# Initialisation du corps et de la courbe
+F = GF(p)
+E = EllipticCurve(F, [a, b])
+G = E(gx, gy)
+Q = E(qx, qy)
+
+# Vérification que la courbe est bien anormale
+assert E.order() == p, "La courbe n'est pas anormale (ordre ≠ p)"
+
+print("[*] Attaque par méthode rapide u = x/y mod p (corrigée)...")
+
+# Calcul de u(G) et u(Q)
+uG = (gx * inverse_mod(gy, p)) % p
+uQ = (qx * inverse_mod(qy, p)) % p
+
+# Tentative 1 : d = u(Q)/u(G)
+try:
+    d1 = (uQ * inverse_mod(uG, p)) % p
+    if d1 * G == Q:
+        d = d1
+        print("[+] d trouvé avec formule u = x/y mod p (Q direct)")
+    elif (-d1 % p) * G == Q:
+        d = (-d1) % p
+        print("[+] d trouvé avec formule u = x/y mod p (Q opposé)")
+    else:
+        print("[-] Formule x/y n’a pas donné de résultat direct.")
+        d = None
+except Exception as e:
+    print("[-] Erreur lors du calcul avec la formule rapide :", e)
+    d = None
+
+# Vérification via padic_elliptic_logarithm
+print("[*] Attaque de Smart via padic_elliptic_logarithm...")
+d_smart = G.padic_elliptic_logarithm(Q, p)
+assert d_smart * G == Q
+
+print("[+] d (Smart) =", hex(d_smart))
+
+if d is not None and d != d_smart:
+    print("[!] ⚠ d (formule) ≠ d (Smart), différence de signe ou bug")
+
+print("[✔] d =", hex(d_smart))
