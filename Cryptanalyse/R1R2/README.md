@@ -3,7 +3,8 @@
 Bienvenue dans le dépôt de **Cryptanalyse/R1R2**.
 
 ## Enoncé du sujet
-![image](...)
+![image](https://github.com/user-attachments/assets/dd574c63-0d44-4be7-8e12-bbbe8d981293)
+
 
 
 ## Fonctionnalités
