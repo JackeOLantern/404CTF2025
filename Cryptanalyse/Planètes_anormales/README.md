@@ -10,6 +10,8 @@ Bienvenue dans le dépôt de **Cryptanalyse/Planètes anormales**.
 
 - **La solution expliquée** : Planètes anormales (Fichier PDF / ODT).
 - **La synchronisation de source** : challenge.py (Script PY)
+- **La résolution de ce challenge** : decrypt.py
+- **Les analyses pour la solution** : sagemaths.txt
 
 ## Installation
 
