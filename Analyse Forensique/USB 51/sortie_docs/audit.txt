@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Jun  7 18:37:32 2025
+Invocation: foremost -i capture.pcapng -o sortie_docs 
+Output directory: /mnt/Share/404CTF2025/Analyse Forensique/USB 51/sortie_docs
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: capture.pcapng
+Start: Sat Jun  7 18:37:32 2025
+Length: 64 KB (66276 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000008.pdf 	      46 KB 	       4540 	 
+Finish: Sat Jun  7 18:37:32 2025
+
+1 FILES EXTRACTED
+	
+pdf:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Jun  7 18:37:33 2025
