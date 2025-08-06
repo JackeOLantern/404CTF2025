@@ -4,6 +4,8 @@ Bienvenue dans le dépôt de **Analyse Forensique/Forensic et Mat 1_2**.
 
 ## Enoncé du sujet
 ![image](assets/images/enonce.png)
+![image](assets/images/correction.png)
+![image](assets/images/solution.png)
 
 
 
