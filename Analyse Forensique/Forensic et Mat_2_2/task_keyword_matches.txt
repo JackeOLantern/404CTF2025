@@ -1,0 +1,63 @@
+TIMESTAMP: 1747270828
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"><System><Provider Name="CTF.SecurityAudit"></Provider>
+<EventID Qualifiers="0">4698</EventID>
+<Level>3</Level>
+<Task>0</Task>
+<Keywords>0x0080000000000000</Keywords>
+<TimeCreated SystemTime="2025-05-15 01:00:28.114120+00:00"></TimeCreated>
+<EventRecordID>1148</EventRecordID>
+<Channel>CTFCORP_Security</Channel>
+<Computer>DC1.ctfcorp.local</Computer>
+<Security UserID=""></Security>
+</System>
+<EventData><Data>&lt;string&gt;Nouvelle t&#226;che planifi&#233;e cr&#233;&#233;e : \WinUpdate_Check_75312 - user=svc-x - Description=Trigger: @reboot
+
+Informations suppl&#233;mentaires :
+- SubjectUserSid: S-1-5-21-3623811015-3361044348-30300820-1013
+- SubjectUserName: svc-x
+- SubjectDomainName: CTFCORP
+- SubjectLogonId: 0x63084
+- TaskName: \WinUpdate_Check_75312
+- TaskContent: &lt;Task version='1.2'&gt;&lt;Triggers&gt;&lt;BootTrigger&gt;&lt;Enabled&gt;true&lt;/Enabled&gt;&lt;/BootTrigger&gt;&lt;/Triggers&gt;&lt;Actions&gt;&lt;Exec&gt;&lt;Command&gt;powershell.exe&lt;/Command&gt;&lt;Arguments&gt;-WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Users\svc-x\AppData\Local\Temp\payload.ps1&lt;/Arguments&gt;&lt;/Exec&gt;&lt;/Actions&gt;&lt;/Task&gt;
+- EventTimestamp: 2025-05-14T18:00:28.1141208Z&lt;/string&gt;
+</Data>
+<Binary></Binary>
+</EventData>
+</Event>
+
+TIMESTAMP: 1747270831
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"><System><Provider Name="CTF.SecurityAudit"></Provider>
+<EventID Qualifiers="0">4688</EventID>
+<Level>3</Level>
+<Task>0</Task>
+<Keywords>0x0080000000000000</Keywords>
+<TimeCreated SystemTime="2025-05-15 01:00:31.004778+00:00"></TimeCreated>
+<EventRecordID>1184</EventRecordID>
+<Channel>CTFCORP_Security</Channel>
+<Computer>DC1.ctfcorp.local</Computer>
+<Security UserID=""></Security>
+</System>
+<EventData><Data>&lt;string&gt;T&#226;che planifi&#233;e \WinUpdate_Check_75312 lanc&#233;e : C:\Users\svc-x\AppData\Local\Temp\payload.ps1
+
+Informations suppl&#233;mentaires :
+- SubjectUserSid: S-1-5-21-3623811015-3361044348-30300820-1013
+- SubjectUserName: svc-x
+- SubjectDomainName: CTFCORP
+- SubjectLogonId: 0x15522
+- NewProcessId: 0x6922
+- NewProcessName: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+- TokenElevationType: %%1936
+- ProcessId: 0x8953
+- CommandLine: -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\Users\svc-x\AppData\Local\Temp\payload.ps1
+- TargetUserSid: S-1-5-21-3623811015-3361044348-30300820-1013
+- TargetUserName: svc-x
+- TargetDomainName: CTFCORP
+- TargetLogonId: 0x42135
+- ParentProcessName: C:\Windows\System32\taskeng.exe
+- MandatoryLabel: S-1-16-12288
+- EventTimestamp: 2025-05-14T18:00:31.0047783Z&lt;/string&gt;
+</Data>
+<Binary></Binary>
+</EventData>
+</Event>
+

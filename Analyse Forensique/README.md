@@ -4,18 +4,12 @@ Bienvenue dans le dépôt de **Analyse Forensique/USB 51**.
 
 ## Enoncé du sujet
 ![image](assets/images/enonce.png)
-![image](assets/images/solution.png)
-![image](assets/images/bintoascii.png)
-![image](assets/images/correction.png)
 
-## Constat
-Une phrase binaire est découverte au sein d'un document extrait.
-Il est aisé de voir un encodage depuis les caractères ASCII.
-Il suffit de décoder chaque caractère de la table.
+
 
 ## Fonctionnalités
 
-- **La solution expliquée** : bintoascii.png (Fichier PNG).
+- **La solution expliquée** : USB_51 (Fichier PDF / Word).
 - **La synchronisation de source** : capture.pcapng (Script PY)
 - **La résolution de la source** : exfiltrated_document (PDF)
 - **L'outil d'extraction de source** : pdf-parser.py (script)

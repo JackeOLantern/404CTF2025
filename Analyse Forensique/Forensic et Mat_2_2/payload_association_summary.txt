@@ -1,0 +1,30 @@
+TIMESTAMP: 1747270828
+USER: None | IP: None | PORT: 2004 | GROUP: None
+XML Snippet: <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"><System><Provider Name="CTF.SecurityAudit"></Provider>
+<EventID Qualifiers="0">4698</EventID>
+<Level>3</Level>
+<Task>0</Task>
+<Keywords>0x0080000000000000</Keywords>
+<TimeCreated SystemTime="2025-05-15 01:00:28.114120+00:00"></TimeCreated>
+<EventRecordID>1148</EventRecordID>
+<Channel>CTFCORP_Security</Channel>
+<Computer>DC1.ctfcorp.local</Computer>
+<Security UserID=""></Security>
+</System>
+<EventData><Data>&lt;string&gt;Nouvell
+
+TIMESTAMP: 1747270831
+USER: None | IP: None | PORT: 2004 | GROUP: None
+XML Snippet: <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event"><System><Provider Name="CTF.SecurityAudit"></Provider>
+<EventID Qualifiers="0">4688</EventID>
+<Level>3</Level>
+<Task>0</Task>
+<Keywords>0x0080000000000000</Keywords>
+<TimeCreated SystemTime="2025-05-15 01:00:31.004778+00:00"></TimeCreated>
+<EventRecordID>1184</EventRecordID>
+<Channel>CTFCORP_Security</Channel>
+<Computer>DC1.ctfcorp.local</Computer>
+<Security UserID=""></Security>
+</System>
+<EventData><Data>&lt;string&gt;T&#226;
+
