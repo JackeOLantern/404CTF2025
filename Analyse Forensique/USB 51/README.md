@@ -4,14 +4,16 @@ Bienvenue dans le dépôt de **Analyse Forensique/USB 51**.
 
 ## Enoncé du sujet
 ![image](assets/images/enonce.png)
-![image](assets/images/solution.png)
+![image](assets/images/panorama.png)
+![image](assets/images/extraction.png)
 ![image](assets/images/bintoascii.png)
+![image](assets/images/solution.png)
 ![image](assets/images/correction.png)
 
 ## Constat
 Une phrase binaire est découverte au sein d'un document extrait.
-Il est aisé de voir un encodage depuis les caractères ASCII.
-Il suffit de décoder chaque caractère de la table.
+Il est aisé de voir un encodage depuis les caractères : ASCII.
+Il suffit de décoder chaque caractère de la table pour le flag.
 
 ## Fonctionnalités
 
