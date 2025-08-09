@@ -1,13 +1,14 @@
 # Solution du challenge : La ville en rose
 
-Bienvenue dans le dépôt de **Renseignement en sources ouvertes/La ville en rose**.
+Bienvenue dans le dépôt des **Renseignement en sources ouvertes/La ville en rose**.
 
 ## Enoncé du sujet
 ![image](assets/images/correction.png)
-![image](assets/images/1782750.jpg)
-![image](assets/images/divers.jpg)
-![image](assets/images/Thomas-Pesquet-Cité-Espace-9.jpg)
+![image](assets/images/parmi_le_public.jpg)
+![image](assets/images/divers_gens.jpg)
+![image](assets/images/Thomas-Pesquet-Cité-Espace.jpg)
 
+L'objectif est l'horaire et le lieu d'un show public de Thomas en lunettes de soleil et GoPro à bout de bras parmi la foule.
 
 ## Fonctionnalités
 
