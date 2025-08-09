@@ -11,6 +11,8 @@ Bienvenue dans le dépôt de **Renseignement en sources ouvertes/Earth_Attack_0_
 
 ## Fonctionnalités
 
+Le but est de trouver l'immatriculation d'un appareil sur enquête.
+
 - **La solution expliquée** : evenement (PNG).
 - **La synchronisation de source** : correction (PNG)
 - **La résolution de la source** : immatriculation (Google image)
