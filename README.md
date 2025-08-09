@@ -18,6 +18,8 @@ Les questions sont exprimées à travers le *pop down*. C'est le libellé d'éno
 
 ## __Writeup__
 Plusieurs solutions sont à présent émises en représentation de Write-up à la résolution. 
+![image](assets/images/innover_discret.jpg)
+
 
 ## __Attention__
 L'ensemble des challenges est accessible à la consultation en ligne dans le même environnement que la réalisation jusqu'aux Fora. Puis, le portail sera remis en service. L'ensemble va être vraisemblablement aussi désinstallé à l'issue des représentations...
