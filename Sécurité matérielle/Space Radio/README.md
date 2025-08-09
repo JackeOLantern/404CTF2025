@@ -10,7 +10,7 @@ Bienvenue dans le dépôt de **Sécurité matérielle/Space Radio**.
 
 [🔊 Écouter le sample (WAV)][wav]
 
-[wav]: assets/audio/fm_demodulated.wav
+[wav]: fm_demodulated.wav
 
 ## Fonctionnalités
 

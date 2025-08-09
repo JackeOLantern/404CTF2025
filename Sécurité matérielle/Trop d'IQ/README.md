@@ -9,7 +9,7 @@ Bienvenue dans le dépôt de **Sécurité matérielle/Trop d'I.Q.**.
 
 [🔊 Écouter le sample (WAV)][wav]
 
-[wav]: assets/audio/recovered_signal.wav
+[wav]: recovered_signal.wav
 
 
 ## Fonctionnalités
