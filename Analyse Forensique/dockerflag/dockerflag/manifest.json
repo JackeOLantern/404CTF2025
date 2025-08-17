@@ -1,0 +1,11 @@
+[
+  {
+    "Config": "config.json",
+    "RepoTags": [
+      "unset-repo/unset-image-name:latest"
+    ],
+    "Layers": [
+      "dummy_layer.tar.gz"
+    ]
+  }
+]

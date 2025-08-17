@@ -1,0 +1,18 @@
+{
+  "architecture": "amd64",
+  "os": "linux",
+  "rootfs": {
+    "type": "layers",
+    "diff_ids": [
+      "sha256:dummydiff"
+    ]
+  },
+  "history": [
+    {
+      "created_by": "COPY git_repos/ ."
+    },
+    {
+      "created_by": "RUN rm -rf .git"
+    }
+  ]
+}
