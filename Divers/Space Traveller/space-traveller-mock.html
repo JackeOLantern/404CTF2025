@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Space Traveller — mock local</title>
+<style>
+:root{--bg:#0b1a2b;--fg:#e8f1ff;--accent:#5ac3ff}
+html,body{margin:0;height:100%;background:#050b12;color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans"}
+header{padding:16px 24px;display:flex;gap:12px;align-items:center;background:linear-gradient(#0d223a,#091520);border-bottom:1px solid #16283d}
+.badge{font-size:12px;border:1px solid #2a3c55;padding:4px 8px;border-radius:999px;background:#0f2338}
+.wrap{max-width:1000px;margin:0 auto;padding:18px 24px 32px}
+#gamebox{display:grid;grid-template-columns:1fr;gap:12px}
+canvas{width:960px;height:600px;background:#07111b;border:1px solid #16283d;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.5) inset;display:block;margin:0 auto}
+.hud{display:flex;justify-content:center;gap:24px;font-weight:600;margin-bottom:8px}
+.score{color:#9fe870}.tips{opacity:.8}
+#flag{margin:16px auto 0;width:fit-content;padding:12px 16px;border-radius:10px;background:#0f2a1a;border:1px solid #235a38;color:#b9ffd2;font-weight:700;letter-spacing:.5px;display:none}
+footer{opacity:.8;text-align:center;font-size:12px;padding:16px}
+a{color:var(--accent)}
+</style></head>
+<body>
+<header><div class="badge">Space Traveller — page de substitution</div><div class="badge">Mock autonome</div></header>
+<div class="wrap">
+  <div class="hud"><div>Score: <span class="score" id="score">0</span></div><div class="tips">Le flag apparaît à 90.</div></div>
+  <div id="gamebox"><canvas id="canvas" width="960" height="600"></canvas></div>
+  <div id="flag"></div>
+</div>
+<footer>Expose <code>window.game.score</code> et révèle un flag au score ≥ 90.</footer>
+<script>
+window.game={score:0};
+const canvas=document.getElementById('canvas');
+const ctx=canvas.getContext('2d');
+const scoreEl=document.getElementById('score');
+const flagEl=document.getElementById('flag');
+const FLAG="404CTF{TR1CH3R_C_EST_PAS_UN_B0N_G4M3_D3S1GN}";
+let shipY=canvas.height/2, obstacles=[], lastSpawn=0, t0=performance.now();
+function spawnObstacle(){const gap=170, top=60+Math.random()*320; obstacles.push({x:canvas.width+40, top:top, gap:gap, w:80, speed:3.2});}
+function draw(){const now=performance.now(); const dt=now-t0; t0=now;
+  ctx.fillStyle='#06101a'; ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle='rgba(255,255,255,.4)'; for(let i=0;i<60;i++){const x=(i*73+(Date.now()/20)%canvas.width)%canvas.width; const y=(i*37)%canvas.height; ctx.fillRect(canvas.width-x,y,2,2);}
+  if(now-lastSpawn>1300){lastSpawn=now; spawnObstacle();}
+  for(const o of obstacles) o.x-=o.speed;
+  ctx.fillStyle='#1e8fff'; for(const o of obstacles){ctx.fillRect(o.x,0,o.w,o.top); const by=o.top+o.gap; ctx.fillRect(o.x,by,o.w,canvas.height-by);}
+  ctx.fillStyle='#9fe870'; ctx.beginPath(); ctx.arc(70,shipY,18,0,Math.PI*2); ctx.fill();
+  const collide=obstacles.some(o=>{ if(o.x<88&&o.x+o.w>52){ if(shipY<o.top-18||shipY>o.top+o.gap+18) return true;} return false;});
+  if(collide){ shipY=Math.min(canvas.height-30, Math.max(30, shipY + (Math.random()<.5?-40:40)));}
+  window.game.score+=1; scoreEl.textContent=window.game.score;
+  if(window.game.score>=90){ flagEl.style.display='block'; flagEl.textContent=FLAG; }
+  requestAnimationFrame(draw);
+}
+addEventListener('keydown',e=>{ if(e.key==='ArrowUp') shipY=Math.max(20,shipY-30); if(e.key==='ArrowDown') shipY=Math.min(canvas.height-20,shipY+30);});
+requestAnimationFrame(draw);
+</script></body></html>
